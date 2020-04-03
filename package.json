@@ -1,0 +1,16 @@
+{
+  "name": "screensaver",
+  "version": "1.0.0",
+  "description": "do something after timeout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "screensaver",
+    "js",
+    "module"
+  ],
+  "author": "rttmax",
+  "license": "ISC"
+}
