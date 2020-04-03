@@ -43,12 +43,12 @@ export default class Screensaver {
 
   start() {
     this.active = true;
-    this.onActivation()
+    this.settings.onActivation()
   }
 
   stop() {
     this.active = false;
-    this.onDeactivation();
+    this.settings.onDeactivation();
 
   }
 
