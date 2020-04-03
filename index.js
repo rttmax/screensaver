@@ -12,6 +12,8 @@ export default class Screensaver {
       },
       ...settings
     }
+
+    this.init()
   }
 
   init() {
