@@ -1,5 +1,5 @@
 export default class Screensaver {
-  constructor() {
+  constructor(settings) {
     this.settings = {
       ...{
         idleTime: 5,
