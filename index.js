@@ -22,7 +22,7 @@ export default class Screensaver {
         clearTimeout(this.timeout);
 
         if (this.active) {
-          this.stopScreensaver();
+          this.stop();
         }
         this.setTimeout();
       });
@@ -34,17 +34,19 @@ export default class Screensaver {
 
   setTimeout() {
     this.timeout = setTimeout(() => {
-      this.showScreensaver();
+      this.start();
     }, 1000 * this.settings.idleTime);
 
   }
 
-  showScreensaver() {
+  start() {
     this.active = true;
+    this.onActivation()
   }
 
-  stopScreensaver() {
+  stop() {
     this.active = false;
+    this.onDeactivation();
 
   }
 
