@@ -1,4 +1,4 @@
-export default class {
+export default class Screensaver {
   constructor() {
     this.settings = {
       ...{
