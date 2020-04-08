@@ -1,17 +1,18 @@
 export default class Screensaver {
   constructor(settings) {
-    this.settings = {
-      ...{
-        idleTime: 5,
-        onActivation: () => {
-          console.log("start screensaver");
-        },
-        onDeactivation: () => {
-          console.log("stop screensaver");
-        }
+
+
+    this.settings = Object.assign({
+      idleTime: 5,
+      onActivation: () => {
+        console.log("start screensaver");
       },
-      ...settings
-    }
+      onDeactivation: () => {
+        console.log("stop screensaver");
+      }
+    }, settings)
+
+
 
     this.init()
   }
