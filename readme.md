@@ -4,6 +4,7 @@ Do something when there is no interaction ("mousemove", "touchstart") with windo
 ````
 const mySreensaver = new Screensaver({
   idleTime: 5,
+  clearEvents : ['keydown', 'whatEverEvent'],
   onActivation: () => {
     // doWhatever()
   },
