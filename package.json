@@ -1,6 +1,6 @@
 {
   "name": "screensaver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "do something after timeout",
   "main": "index.js",
   "scripts": {
