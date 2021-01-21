@@ -54,6 +54,7 @@ export default class Screensaver {
 
   disable() {
     this.disabled = true;
+    clearTimeout(this.timeout);
   }
 
   enable() {
