@@ -1,7 +1,6 @@
 export default class Screensaver {
   constructor(settings) {
 
-
     this.settings = Object.assign({
       idleTime: 5,
       clearEvents: ["mousemove", "touchstart"],
@@ -13,13 +12,12 @@ export default class Screensaver {
       }
     }, settings)
 
-
-
     this.init()
   }
 
   init() {
     this.active = false;
+    this.disabled = false;
 
     this.settings.clearEvents.forEach(e => {
       window.addEventListener(e, () => {
@@ -37,6 +35,7 @@ export default class Screensaver {
   }
 
   setTimeout() {
+    if (this.disabled) return;
     this.timeout = setTimeout(() => {
       this.start();
     }, 1000 * this.settings.idleTime);
@@ -51,7 +50,14 @@ export default class Screensaver {
   stop() {
     this.active = false;
     this.settings.onDeactivation();
+  }
 
+  disable() {
+    this.disabled = true;
+  }
+
+  enable() {
+    this.disabled = false;
   }
 
 }
