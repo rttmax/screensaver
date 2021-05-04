@@ -59,7 +59,7 @@ export default class Screensaver {
 
   enable() {
     this.disabled = false;
-    this.start();
+    this.setTimeout()
   }
 
 }
